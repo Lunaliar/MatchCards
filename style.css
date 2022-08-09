@@ -1,0 +1,50 @@
+body{
+  margin:0  
+}
+:root{
+  --hue:210;
+  --saturation:65%;
+  --foreground-color:hsl(var(--hue),var(--saturation),75%);
+  --background-color:hsl(var(--hue),var(--saturation),50%);
+}
+
+
+.container{
+  display:flex;
+  flex-direction: column;
+  
+  align-items: center;
+  height:100vh;
+  background-color: var(--background-color);
+  color:var(--foreground-color)
+}
+
+.cards{
+  width:90%;
+  display:grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: 1fr 1fr;
+
+  gap:.5rem;
+  padding:2rem;
+  height:50%;
+}
+
+.card{
+  height:8rem;
+  width:5rem;
+  background-color: var(--foreground-color);
+  margin:auto;
+  border-radius: .5rem;
+}
+
+img{
+  /* object-fit: cover; */
+  height:8rem;
+  width:5rem;
+}
+
+.hidden{
+  opacity: 0;
+}
+
